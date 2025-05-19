@@ -1,20 +1,6 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <string>
-#include <utility>
+#include <bits/stdc++.h>
 
 using namespace std;
-
-void reverse(int a, int b, int* arr) {
-	int size = (b - a) / 2;
-
-	while (size-- >= 0) {
-		swap(arr[a - 1], arr[b - 1]);
-		a++;
-		b--;
-	}
-}
 
 int main(void) {
 	ios::sync_with_stdio(0);
@@ -24,13 +10,11 @@ int main(void) {
 
 	for (int i = 0; i < 20; i++) arr[i] = i+1;
 
-	int count = 10;
-
-	while (count-- > 0) {
+	for (int i = 0; i < 10; i++) {
 		int a, b;
 		cin >> a >> b;
-		reverse(a, b, arr);
+		reverse(arr+a-1, arr+b);
 	}
 
-	for (int i = 0; i < 20; i++) cout << arr[i] << " ";
+	for (int i = 0; i < 20; i++) cout << arr[i] << ' ';
 }
