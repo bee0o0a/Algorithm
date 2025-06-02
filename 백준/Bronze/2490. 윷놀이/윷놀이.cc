@@ -1,11 +1,6 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
-#include <string>
 
 using namespace std;
-
-int max(int x, int y, int z);
 
 char res[] = { 'D', 'C', 'B', 'A', 'E' };
 
